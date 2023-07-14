@@ -1,0 +1,43 @@
+.elements{
+    width:880px;
+    display:grid;
+    grid-template: repeat(2, 1fr)/  repeat(3, 1fr);
+    margin:0 auto 67px;
+    gap:17px;
+    justify-content: space-between;
+}
+.elements__element{
+    display: flex;
+    flex-direction: column;
+
+}
+.element__picture{
+    width:282px;
+    border-radius: 10px 10px 0px 0px;
+}
+.element__rectangle{
+    display: flex;
+    align-items: center;
+    width: 282px;
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+    z-index: 0;
+}
+
+.element_description{
+    width: 225px;
+    margin:25px 0 31px 21px;
+    background-color: white;
+    color:black;
+    font-weight:900;
+    font-size: 24px;
+    line-height:29px;
+}
+
+.element_buton{
+    z-index: 1;
+    background-color: white;
+    width: 21px;
+    height:19px;
+    margin: 0 18px 0 0;    
+}
