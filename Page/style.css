@@ -1,0 +1,25 @@
+@import url(../Vendor/normalize.css);
+@import url(../Vendor/fonts/Inter/inter.css);
+@import url(../Blocks/header.css);
+@import url(../Blocks/profile.css);
+@import url(../Blocks/elements.css);
+@import url(../Blocks/footer.css);
+@import url(../Blocks/popup.css);
+
+*{
+    background-color: black;
+    color:white;
+    font-family: "Inter", Arial, sans-serif;
+    font-weight:400;
+    font-size:18px;
+    line-height:22px;
+
+}
+
+.visible{
+    display:block;
+}
+
+.background__hover{
+    opacity: 0.5;
+}

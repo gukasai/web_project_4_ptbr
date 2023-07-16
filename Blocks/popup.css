@@ -1,0 +1,106 @@
+.popup{
+    width:100%;
+    display:none;
+    z-index: 999;
+    position:absolute;
+    align-items:center;
+    margin:195px auto 0;
+}
+
+.popup__container{
+    width:430px;
+    height:330px;
+    display:flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    border:none;
+    outline:none;
+}
+
+.popup__title{
+    margin:34px  0  0 36px;
+    background-color: white;
+    color:black;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 29px;
+
+}
+
+.popup__name-field, 
+.popup__job-field{
+    width:358px;
+    height:27px;
+    padding: 0 0 13px;
+    background-color: white;
+    color: black;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    border: none;
+    outline:none;
+    border-bottom: 1px solid black;
+    margin:0 auto;
+}
+
+.popup__save-button{
+    width: 358px;
+    height: 50px;
+    border-radius: 2px;
+    margin: 0 auto 36px;
+
+}
+.popup__save-button:hover{
+opacity:80%;
+cursor:url(../Vendor/Images/hand_cursor.png), auto;
+}
+.popup__close-button{
+    width:40px;
+    position:absolute;
+    right: -48px;
+    top:-48px;
+}
+.popup__close-button:hover{
+opacity:60%;
+cursor:url(../Vendor/Images/hand_cursor.svg), auto;
+}
+
+@media (max-width: 768px){
+    .popup{
+        top:108px;
+        margin:0;
+    }
+    .popup__container{
+        width:282px;
+        height:322px;
+        padding:0;
+        margin:0 auto;
+        
+    }
+
+    .popup__close-button{
+        width:26px;
+        right: 0;
+        top: -39px;
+    }
+
+    .popup__title{
+    width:238px;
+    margin:25px auto 16px;
+    font-size: 18px;
+    line-height: 22px;
+    }
+
+    .popup__name-field, 
+    .popup__job-field{
+        width:238px;
+        height:17px;
+    }
+
+    .popup__save-button{
+    width:238px;
+    height:46px;
+    }
+}

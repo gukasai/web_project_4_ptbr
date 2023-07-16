@@ -1,74 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arround USA</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Around the U.S.</title>
+    <link rel="stylesheet" href="./Page/style.css">
 </head>
 <body>
+    <div class="popup">
+        <dialog class="popup__container" >
+            <h2 class="popup__title">Editar Perfil</h2>
+            <input class="popup__name-field" type="text" name="name" placeholder="Jacques Costeau">
+            <input class="popup__job-field" type="text" name="name" placeholder="Explorar">
+            <input class="popup__save-button"  type="submit" name="acao" value="Salvar">
+            <img class="popup__close-button" src="./Vendor/Images/Close_Icon.svg" alt="botão em forma de X para fechar formulário">
+        </dialog>
+    </div>
     <div class="page">
         <div class="header">
-            <img src="./Images/title.svg" alt="título da página em arte vetorial escrito Around the US">
+            <img class="header__logo"src="../Vendor/Images/title.svg" alt="título da página em arte vetorial escrito Around the US">
         </div>
         <div class="profile">
-            <img class="profile__picture" src="./Images/Jacques_costeau.jpg" alt="user avatar picture ">
+            <img class="profile__picture" src="../Vendor/Images/Jacques_costeau.jpg" alt="user avatar picture ">
             <div class="profile__info">
-                <div class='profile__info_box'>
-                    <p class="profile__user_name">Jacques Cousteau</p>
-                    <img class="profile__edit_button" src="Images/edit_button.svg" alt="botão em forma de lápis sugerindo edição do campo">
+                <div class='profile__name-field'>
+                    <p class="profile__name">Jacques Cousteau</p>
+                    <img class="profile__edit-button" src="./Vendor/Images/edit_button.svg" alt="botão em forma de lápis sugerindo edição do campo">
                 </div>
-                <p class="profile__user_explore">Explorar</p>
+                <p class="profile__job">Explorar</p>
             </div>
-            <img class="profile__more_button" src="Images/more_button.svg" alt="botão em forma de um sinal de adição sugerindo mais opções">    
-        </div>
+            <div class="profile__more-button">
+                <img class="profile__more-image" src="./Vendor/Images/more_button.svg" alt="botão em forma de um sinal de adição sugerindo mais opções">
+            </div>
+            </div>
         <div class="elements">
-            <div class="elements__element">
-                <img class="element__picture" src="./Images/vale_yosemite.jpg" alt="foto de um rio cercado de árvores coníferas representando o vale de Yosemite">
-                <div class="element__rectangle">
-                    <p class="element_description">Vale do Yosemite</p>
-                    <img class= "element_buton" src="./Images/like_button.svg" alt="ícone em forma de coração para clicar caso usuário goste da foto">
+            <div class="elements__containner">
+                <img class="elements__picture" src="../Vendor/Images/vale_yosemite.jpg" alt="foto de um rio cercado de árvores coníferas representando o vale de Yosemite">
+                <div class="elements__rectangle">
+                    <p class="elements__description">Vale do Yosemite</p>
+                    <img class= "elements__button" src="../Vendor/Images/like_button.svg" alt="ícone em forma de coração para clicar caso usuário goste da foto">
                 </div>
             </div>
-            <div class="elements__element">
-                <img class="element__picture" src="./Images/Lago_louise.png" alt="foto de um rio cercado degeleiras representando o Lago Louise">
-                <div class="element__rectangle">
-                    <p class="element_description">Lago Louise</p>
-                    <img class= "element_buton" src="./Images/like_button.svg" alt="ícone em forma de coração para clicar caso usuário goste da foto">
+            <div class="elements__containner">
+                <img class="elements__picture" src="../Vendor/Images/Lago_louise.png" alt="foto de um rio cercado degeleiras representando o Lago Louise">
+                <div class="elements__rectangle">
+                    <p class="elements__description">Lago Louise</p>
+                    <img class= "elements__button" src="../Vendor/Images/like_button.svg" alt="ícone em forma de coração para clicar caso usuário goste da foto">
                 </div>
             </div>
-            <div class="elements__element">
-                <img class="element__picture" src="./Images/montanha.jpg" alt="foto do sol nascendo no horizonte representando as montanhas Care...">
-                <div class="element__rectangle">
-                    <p class="element_description">Montanhas Care...</p>
-                    <img class= "element_buton" src="./Images/like_button.svg" alt="ícone em forma de coração para clicar caso usuário goste da foto">
+            <div class="elements__containner">
+                <img class="elements__picture" src="../Vendor/Images/montanha.jpg" alt="foto do sol nascendo no horizonte representando as montanhas Care...">
+                <div class="elements__rectangle">
+                    <p class="elements__description">Montanhas Care...</p>
+                    <img class= "elements__button" src="../Vendor/Images/like_button.svg" alt="ícone em forma de coração para clicar caso usuário goste da foto">
                 </div>
             </div>
-            <div class="elements__element">
-                <img class="element__picture" src="./Images/Latemar.jpg" alt="foto da luz do luar iluminando uma face das montanhas representando as montanhas de Latemar">
-                <div class="element__rectangle">
-                    <p class="element_description">Latemar</p>
-                    <img class= "element_buton" src="./Images/like_button.svg" alt="ícone em forma de coração para clicar caso usuário goste da foto">
+            <div class="elements__containner">
+                <img class="elements__picture" src="../Vendor/Images/Latemar.jpg" alt="foto da luz do luar iluminando uma face das montanhas representando as montanhas de Latemar">
+                <div class="elements__rectangle">
+                    <p class="elements__description">Latemar</p>
+                    <img class= "elements__button" src="../Vendor/Images/like_button.svg" alt="ícone em forma de coração para clicar caso usuário goste da foto">
                 </div>
             </div>
-            <div class="elements__element">
-                <img class="element__picture" src="./Images/Vanoise.jpg" alt="foto da cadeia de montanhas e de seu reflexo no rio representando o parque Nacional de Vanoise">
-                <div class="element__rectangle">
-                    <p class="element_description">Vanoise Nationa...</p>
-                    <img class= "element_buton" src="./Images/like_button.svg" alt="ícone em forma de coração para clicar caso usuário goste da foto">
+            <div class="elements__containner">
+                <img class="elements__picture" src="../Vendor/Images/Vanoise.jpg" alt="foto da cadeia de montanhas e de seu reflexo no rio representando o parque Nacional de Vanoise">
+                <div class="elements__rectangle">
+                    <p class="elements__description">Vanoise National Park</p>
+                    <img class= "elements__button" src="../Vendor/Images/like_button.svg" alt="ícone em forma de coração para clicar caso usuário goste da foto">
                 </div>
             </div>
-            <div class="elements__element">
-                <img class="element__picture" src="./Images/Lago.jpg" alt="foto de um deque de madeira no rio e a cadeia de montanhas congeladas ao fundo do Lago di Braies">
-                <div class="element__rectangle">
-                    <p class="element_description">Lago di Braies</p>
-                    <img class= "element_buton" src="./Images/like_button.svg" alt="ícone em forma de coração para clicar caso usuário goste da foto">
+            <div class="elements__containner">
+                <img class="elements__picture" src="../Vendor/Images/Lago.jpg" alt="foto de um deque de madeira no rio e a cadeia de montanhas congeladas ao fundo do Lago di Braies">
+                <div class="elements__rectangle">
+                    <p class="elements__description">Lago di Braies</p>
+                    <img class= "elements__button" src="../Vendor/Images/like_button.svg" alt="ícone em forma de coração para clicar caso usuário goste da foto">
                 </div>
             </div>
         </div>
         <div class="footer">
-            <p class="footer_copyrights">© 2021 Around The U.S.</p>
+            <p class="footer__copyrights">© 2021 Around The U.S.</p>
         </div>
     </div>
+<script src="./Script/index.js"></script>
 </body>
 </html>
