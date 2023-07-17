@@ -1,7 +1,9 @@
 # Projeto 5:  EUA Afora
-Projeto do bootcamp organizado pela triple ten com funçõoes introdutórioas a JavasCript em elementos HTML e CSS.
-### Visão geral
+Desenvolvido por Gustavo Kasai:
+https://github.com/gukasai
 
+### Visão geral
+Projeto do bootcamp organizado pela triple ten com funçõoes introdutórioas a JavasCript em elementos HTML e CSS.
 * Figma
 * Imagens
 
