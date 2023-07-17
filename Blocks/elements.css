@@ -44,11 +44,11 @@
 }
 .elements__button:hover{
     opacity:50%;
-    cursor:url(../Vendor/Images/hand_cursor.svg), auto;
+    cursor:url(./Vendor/Images/hand_cursor.svg), auto;
 }
 
 .elements__button:active{
-    -webkit-backdrop-filter: invert(1);
+    backdrop-filter: invert(1);
 }
 
 @media (max-width: 768px){
