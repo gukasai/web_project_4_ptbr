@@ -110,6 +110,9 @@
         line-height: 27px;
         letter-spacing: 0em;
         margin: 0 10px 0 0;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
     
     }
     .profile__job{
@@ -121,6 +124,7 @@
         letter-spacing: 0em;
         text-align: center;
         margin:0 auto 36px;
+        width:282px;
 
     }
     .profile__edit-button{
