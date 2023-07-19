@@ -1,9 +1,8 @@
 # Projeto 5:  EUA Afora
-Desenvolvido por Gustavo Kasai:
-https://github.com/gukasai
+https://gukasai.github.io/web_project_4_ptbr/
 
 ### Visão geral
-Projeto do bootcamp organizado pela triple ten com funçõoes introdutórioas a JavasCript em elementos HTML e CSS.
+* Projeto do bootcamp organizado pela triple ten com funçõoes introdutórioas a JavasCript em elementos HTML e CSS.
 * Figma
 * Imagens
 
