@@ -50,21 +50,21 @@
 
     function alternarClasse() {
         popup.classList.toggle("visible");
-        popup.classList.toggle("background__hover");
-        pagina.classList.toggle("background__hover");
+        popup.classList.toggle("background-hover");
+        pagina.classList.toggle("background-hover");
     };
 
     function alternarClasseMore() {
         popupMore.classList.toggle("visible");
-        popupMore.classList.toggle("background__hover");
-        pagina.classList.toggle("background__hover");
+        popupMore.classList.toggle("background-hover");
+        pagina.classList.toggle("background-hover");
     };
 
     function alternarClassePopup() {
         const popupElements = document.querySelector("#popup");
         popupElements.classList.toggle("unhide");
-        popupElements.classList.toggle("background__hover");
-        pagina.classList.toggle("background__hover");
+        popupElements.classList.toggle("background-hover");
+        pagina.classList.toggle("background-hover");
     }
     
     function SalvarProfile(evt) {
@@ -87,8 +87,8 @@
         popupTitleElement.textContent = descriptionElement.textContent;
         
         popupElements.classList.toggle("unhide");
-        popupElements.classList.toggle("background__hover");
-        pagina.classList.toggle("background__hover");
+        popupElements.classList.toggle("background-hover");
+        pagina.classList.toggle("background-hover");
         const botaoFechar =document.querySelector(".popup-elements__close-button");
         botaoFechar.addEventListener('click', alternarClassePopup);
         
