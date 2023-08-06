@@ -6,6 +6,7 @@
 @import url(../Blocks/footer.css);
 @import url(../Blocks/popup.css);
 
+
 *{
     background-color: black;
     color:white;
@@ -14,12 +15,20 @@
     font-size:18px;
     line-height:22px;
 
+    z-index: 1;
+}
+
+.page{
+    max-width: 100vw;
+
 }
 
 .visible{
     display:block;
 }
-
+.unhide{
+    visibility: visible;
+}
 .background__hover{
     opacity: 0.5;
 }

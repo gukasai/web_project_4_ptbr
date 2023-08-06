@@ -5,16 +5,20 @@
     margin:0 auto 67px;
     gap:17px;
     justify-content: space-between;
+    
 }
 .elements__containner{
     display: flex;
     flex-direction: column;
-
+    position:relative;
 }
 .elements__picture{
     width:282px;
+    height:282px;
     border-radius: 10px 10px 0px 0px;
+    
 }
+
 .elements__rectangle{
     display: flex;
     align-items: center;
@@ -41,16 +45,26 @@
     width: 21px;
     height:19px;
     margin: 0 18px 0 0;
+    background-color: transparent;
 }
+
 .elements__button:hover{
     opacity:50%;
-    cursor:url(./Vendor/Images/hand_cursor.svg), auto;
+    cursor:url(../Vendor/Images/hand_cursor.svg), auto;
 }
 
-.elements__button:active{
-    backdrop-filter: invert(1);
+.elements__delete-button{
+    width:18px;
+    position:absolute;
+    right: 15px;
+    top:18px;
+    z-index: 998;
+    background-color: transparent;
 }
-
+.elements__delete-button:hover{
+    opacity:60%;
+    cursor:url(../Vendor/Images/hand_cursor.svg), auto;
+}
 @media (max-width: 768px){
     
     .elements{
