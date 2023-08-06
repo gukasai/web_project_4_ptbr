@@ -18,7 +18,7 @@
     let placeLink = document.querySelector('.popup-more__url');
     const elementTemplate = document.querySelector('#elements-template');
     const cardName = document.querySelector(".popup-more__place-field");
-    const cardLink = document.querySelector(".popup-more__url");  
+    const cardLink = document.querySelector(".popup-more__url"); 
     let elementsPictures = document.querySelectorAll('.elements__picture');
     const popupElements = document.querySelector('#popup');
     const initialCards = [
@@ -104,7 +104,7 @@
         linkElement.alt = card.name;
         
         const deleteButton = cardElement.querySelector('.elements__delete-button');
-        deleteButton.addEventListener('click', deleteParent); 
+        deleteButton.addEventListener('click', deleteParent);
 
         const likeButton = cardElement.querySelector('.elements__button');
         likeButton.addEventListener('click', likeClick);
@@ -139,7 +139,7 @@
     linkElement.alt = card.name;
 
     const deleteButton = cardElement.querySelector('.elements__delete-button');
-    deleteButton.addEventListener('click', deleteParent); 
+    deleteButton.addEventListener('click', deleteParent);
 
     const likeButton = cardElement.querySelector('.elements__button');
     likeButton.addEventListener('click', likeClick);
