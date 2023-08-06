@@ -60,8 +60,8 @@
 
 .popup-more__save-button:hover,
 .popup__save-button:hover{
-opacity:80%;
-cursor:url(../Vendor/Images/hand_cursor.svg), auto;
+    opacity:80%;
+    cursor:url(../Vendor/Images/hand_cursor.svg), auto;
 }
 
 .popup-more__close-button,
@@ -74,16 +74,16 @@ cursor:url(../Vendor/Images/hand_cursor.svg), auto;
 
 .popup-more__close-button:hover,
 .popup__close-button:hover{
-opacity:60%;
-cursor:url(../Vendor/Images/hand_cursor.svg), auto;
+    opacity:60%;
+    cursor:url(../Vendor/Images/hand_cursor.svg), auto;
 }
 
 .popup-elements{
     position:absolute;
     left:0%;
     top:0%;
-    width:99vw;
-    height:99vh;
+    width:90vw;
+    height:90vh;
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -138,6 +138,7 @@ cursor:url(../Vendor/Images/hand_cursor.svg), auto;
         top:108px;
         margin:0;
     }
+
     .popup-more__container,
     .popup__container{
         width:282px;
@@ -155,10 +156,10 @@ cursor:url(../Vendor/Images/hand_cursor.svg), auto;
 
     .popup-more__title,
     .popup__title{
-    width:238px;
-    margin:25px auto 16px;
-    font-size: 18px;
-    line-height: 22px;
+        width:238px;
+        margin:25px auto 16px;
+        font-size: 18px;
+        line-height: 22px;
     }
 
     .popup__name-field, 
@@ -171,7 +172,7 @@ cursor:url(../Vendor/Images/hand_cursor.svg), auto;
 
     .popup-more__save-button
     .popup__save-button{
-    width:238px;
-    height:46px;
+        width:238px;
+        height:46px;
     }
 }
