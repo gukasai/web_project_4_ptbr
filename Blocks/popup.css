@@ -6,6 +6,9 @@
     position:absolute;
     align-items:center;
     margin:195px auto 0;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0.5;
+    
 }
 
 .popup-more__container,
@@ -79,7 +82,10 @@
 }
 
 .popup-elements{
-    position:absolute;
+    position:fixed;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
     left:0%;
     top:0%;
     width:90vw;

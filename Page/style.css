@@ -19,15 +19,17 @@
 
 .page{
     max-width: 100vw;
-
 }
 
 .visible{
     display:block;
+    opacity: 1;
 }
 .unhide{
+    opacity: 1;
     visibility: visible;
 }
 .background-hover{
     opacity: 0.5;
 }
+
