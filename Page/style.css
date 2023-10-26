@@ -25,6 +25,10 @@
     display:block;
     opacity: 1;
 }
+
+.hide{
+    opacity:0;
+}
 .unhide{
     opacity: 1;
     visibility: visible;
@@ -32,4 +36,16 @@
 .background-hover{
     opacity: 0.5;
 }
+
+.disabled {
+    background-color:white;
+    opacity:20%;
+    color:black;
+}
+
+.disabled:hover {
+    cursor:auto;
+    opacity:0.2;
+}
+
 

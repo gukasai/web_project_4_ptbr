@@ -186,7 +186,3 @@ function likeClick(event) {
     saveButtonMore.addEventListener('click', createCardFromInput);
 
     initialCards.forEach(createCard);
-
-    
-    
-
