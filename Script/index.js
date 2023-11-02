@@ -1,4 +1,5 @@
     const edit = document.querySelector(".profile__edit-button");
+    const popupElement = document.querySelectorAll('.popup-element');
     const popup = document.querySelector('.popup');
     const popupMore = document.querySelector('.popup-more');
     const fechar = document.querySelector('.popup__close-button');
@@ -13,6 +14,7 @@
     const like = document.querySelector('.elements_buton');
     const pagina = document.querySelector('.page');
     const more = document.querySelector('.popup__more');
+    const background = document.querySelector('.overlay');
     const moreButton = document.querySelector('.profile__more-button');
     const placeName = document.querySelector('.popup-more__place-field');
     const placeLink = document.querySelector('.popup-more__url');
@@ -50,21 +52,19 @@
 
     function alternarClasse() {
         popup.classList.toggle("visible");
-        popup.classList.toggle("background-hover");
-        pagina.classList.toggle("background-hover");
+        pagina.classList.add("background-hover");
     };
 
     function alternarClasseMore() {
         popupMore.classList.toggle("visible");
-        popupMore.classList.toggle("background-hover");
-        pagina.classList.toggle("background-hover");
+        pagina.classList.add("background-hover");
     };
 
     function alternarClassePopup() {
         const popupElements = document.querySelector("#popup");
         popupElements.classList.toggle("unhide");
-        popupElements.classList.toggle("background-hover");
-        pagina.classList.toggle("background-hover");
+        pagina.classList.add("background-hover");
+        popupElements.classList.remove("background-hover");
     }
     
     function SalvarProfile(evt) {
@@ -74,14 +74,22 @@
         alternarClasse();
     };
 
+    function fecharPopup() {
+        const popups = document.querySelectorAll(".popup");
+        popups.forEach(function(popup) {
+            popup.classList.remove("visible");
+            popupMore.classList.remove("visible")
+        });
+        pagina.classList.remove("background-hover");
+        
+}
     function abrirPopup(event) {
         const pictureElement = event.target;
         const cardElement = pictureElement.closest('.elements__containner');
         const descriptionElement = cardElement.querySelector('.elements__description');
         const popupImageElement = document.querySelector('.popup-elements__image');
         const popupTitleElement = document.querySelector('.popup-elements__title');
-        const popupElements = document.querySelector("#popup");
-        
+        const popupElements = document.querySelector("#popup");  
         popupImageElement.src = pictureElement.src;
         popupImageElement.alt = pictureElement.alt;
         popupTitleElement.textContent = descriptionElement.textContent;
@@ -91,8 +99,11 @@
         pagina.classList.toggle("background-hover");
         const botaoFechar =document.querySelector(".popup-elements__close-button");
         botaoFechar.addEventListener('click', alternarClassePopup);
-        
+            
     };
+
+    
+
 
     function createCard(card) { 
         const cardElement = elementTemplate.content.cloneNode(true);
@@ -155,7 +166,7 @@
     } else {
         elementsList.append(cardElement);
     }
-    alternarClasseMore();
+    fecharPopup();
     
 };
 function deleteParent(event) {
@@ -180,9 +191,25 @@ function likeClick(event) {
 
     edit.addEventListener('click', alternarClasse);
     moreButton.addEventListener('click', alternarClasseMore);
-    fechar.addEventListener('click', alternarClasse);
-    fecharMore.addEventListener('click', alternarClasseMore);
     saveButton.addEventListener('click', SalvarProfile);
     saveButtonMore.addEventListener('click', createCardFromInput);
-
+    fechar.addEventListener('click', fecharPopup);
+    fecharMore.addEventListener('click', fecharPopup);
     initialCards.forEach(createCard);
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "Escape") {
+            fecharPopup();
+        }
+    });
+    popup.addEventListener("click", function(event) {
+        if (event.target.classList.contains("overlay")) {
+            fecharPopup();
+        }
+    });
+    popupMore.addEventListener("click", function(event) {
+        if (event.target.classList.contains("overlay")) {
+            fecharPopup();
+        }
+    });
+
+  

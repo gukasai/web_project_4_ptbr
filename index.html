@@ -8,8 +8,8 @@
     <link rel="shortcut icon" type="imagex/png" href="./Vendor/Images/favicon.ico">
 </head>
 <body>
-    <div class="popup background-hover">
-        <form class="popup__container" novalidate>
+    <div class="popup overlay">
+        <form class="popup-element popup__container overlay" novalidate>
             <h2 class="popup__title">Editar Perfil</h2>
             <label class="popup__container-label popup-validate">
                 <input class="popup-input popup__name-field" type="text" name="name" placeholder="Nome">
@@ -19,33 +19,33 @@
                 <input class="popup-input popup__job-field" type="text" name="name" placeholder="Profissão">
                 <span class="error-span  popup__job-field-span">Preencha esse campo.</span>
             </label>
-            <input class="popup__save-button disabled"  type="submit" name="acao" value="Salvar">
-            <img class="popup__close-button" src="./Vendor/Images/Close_Icon.svg" alt="botão em forma de X para fechar formulário">
+            <input class="popup__save-button disabled"  type="submit" name="acao" value="Salvar" >
+            <img class="popup__button popup__close-button" src="./Vendor/Images/Close_Icon.svg" alt="botão em forma de X para fechar formulário">
         </form>
     </div>
-    <div class="popup popup-more background-hover">
-        <form class="popup-more__container" >
+    <div class="popup popup-more overlay">
+        <form class="popup-more__container popup-element" >
             <h2 class="popup-more__title">Novo Local</h2>
             <label class="popup-more-label popup-validate">
-                <input class="popup-input popup-more__place-field" type="text" name="name" placeholder="Título">
+                <input class="popup-input popup-more__place-field" type="text" name="name" minlength="2" maxlength="40" placeholder="Título" required>
                 <span class="error-span popup-more__error-span popup-more__place-title-span">Preencha esse campo.</span>
             </label>
             <label class="popup-more-label popup-validate">
-                <input class="popup-input popup-more__url" type="url" name="name" placeholder="Link de Imagem" novalidate>
+                <input class="popup-input popup-more__url" type="url" name="name" minlength="2" maxlength="200" placeholder="Link de Imagem" required>
                 <span class="error-span popup-more__error-span popup-more__url-title-span">Por favor, insira um endereço web.</span>
             </label>
-            <input class="popup-input popup-more__save-button disabled"  type="submit" name="acao" value="Salvar">
-            <img class="popup-more__close-button" src="./Vendor/Images/Close_Icon.svg" alt="botão em forma de X para fechar formulário">
+            <input class="popup-more__save-button popup__save-button disabled"  type="submit" name="acao" value="Salvar">
+            <img class="popup__button popup-more__close-button" src="./Vendor/Images/Close_Icon.svg" alt="botão em forma de X para fechar formulário">
         </form>
     </div>
-    <form  class="popup-elements background-hover" id="popup" novalidate> 
+    <form  class="popup-element popup-elements  " id="popup" novalidate> 
         <span class="popup-elements__container">
             <img class="popup-elements__close-button" src="./Vendor/Images/Close_Icon.svg" alt="botão em forma de X para fechar formulário">
             <img class='popup-elements__image'src="" alt="">
             <h2 class="popup-elements__title"></h2>
         </span>
     </form>
-    <div class="page">
+    <div class="page overlay">
         <div class="header">
             <img class="header__logo"src="./Vendor/Images/title.svg" alt="título da página em arte vetorial escrito Around the US">
         </div>
