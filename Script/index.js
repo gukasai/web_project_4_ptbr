@@ -179,8 +179,8 @@ function deleteParent(event) {
 
 function likeClick(event) {
     const likeButton = event.target;
-    const activeLikeSrc = "Vendor/Images/like_button_active.svg";
-    const inactiveLikeSrc = "Vendor/Images/like_button.svg";
+    const activeLikeSrc = "Images/like_button_active.svg";
+    const inactiveLikeSrc = "Images/like_button.svg";
 
     if (likeButton.src.includes(activeLikeSrc)) {
         likeButton.src = inactiveLikeSrc;

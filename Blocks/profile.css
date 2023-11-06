@@ -53,7 +53,7 @@
 
 .profile__edit-button:hover{
     opacity:60%;
-    cursor:url(../Vendor/Images/hand_cursor.svg), auto;
+    cursor:url(../Images/hand_cursor.svg), auto;
 }
 
 .profile__more-button{
@@ -67,7 +67,7 @@
 
 .profile__more-button:hover{
     opacity:60%;
-    cursor:url(../Vendor/Images/hand_cursor.svg), auto;
+    cursor:url(../Images/hand_cursor.svg), auto;
 }
 
 .profile__more-image{
