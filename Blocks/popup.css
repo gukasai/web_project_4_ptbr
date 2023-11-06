@@ -76,7 +76,7 @@
 .popup-more__save-button:hover,
 .popup__save-button:hover{
     opacity:80%;
-    cursor:url(../Images/hand_cursor.svg), auto;
+    cursor:url(../images/hand_cursor.svg), auto;
 }
 
 .popup-more__close-button,
@@ -90,7 +90,7 @@
 .popup-more__close-button:hover,
 .popup__close-button:hover{
     opacity:60%;
-    cursor:url(../Images/hand_cursor.svg), auto;
+    cursor:url(../images/hand_cursor.svg), auto;
 }
 
 .popup-elements{
