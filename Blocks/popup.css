@@ -8,7 +8,7 @@
     justify-items: space-around;
     transition: opacity 0.3s ease-in-out;
     opacity: 0.5;
-    background-color: transparent ;
+    background-color: transparent;
     
 }
 
@@ -69,7 +69,7 @@
     width: 358px;
     height: 50px;
     border-radius: 2px;
-    margin: 36px auto ;
+    margin: 36px auto;
 
 }
 
