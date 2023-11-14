@@ -52,7 +52,7 @@
 
     function alternarClasse() {
         popup.classList.toggle("visible");
-        pagina.classList.add("background-hover");
+        pagina.classList.toggle("background-hover");
     };
 
     function alternarClasseMore() {
@@ -76,12 +76,17 @@
 
     function fecharPopup() {
         const popups = document.querySelectorAll(".popup");
+        const inputs = document.querySelectorAll(".popup-input");
         popups.forEach(function(popup) {
             popup.classList.remove("visible");
             popupMore.classList.remove("visible")
         });
         pagina.classList.remove("background-hover");
-        
+        inputs.forEach(function(input) {
+            input.value = '';
+        });
+        saveButton.classList.add("disabled");
+        saveButtonMore.classList.add("disabled")
 }
     function abrirPopup(event) {
         const pictureElement = event.target;
@@ -191,8 +196,6 @@ function likeClick(event) {
 
     edit.addEventListener('click', alternarClasse);
     moreButton.addEventListener('click', alternarClasseMore);
-    saveButton.addEventListener('click', SalvarProfile);
-    saveButtonMore.addEventListener('click', createCardFromInput);
     fechar.addEventListener('click', fecharPopup);
     fecharMore.addEventListener('click', fecharPopup);
     initialCards.forEach(createCard);
@@ -201,15 +204,14 @@ function likeClick(event) {
             fecharPopup();
         }
     });
-    popup.addEventListener("click", function(event) {
+    popup.addEventListener("click", function fecharOverlay(event) {
         if (event.target.classList.contains("overlay")) {
             fecharPopup();
         }
+        
     });
-    popupMore.addEventListener("click", function(event) {
+    popupMore.addEventListener("click", function fecharOverlay(event) {
         if (event.target.classList.contains("overlay")) {
             fecharPopup();
-        }
+        } 
     });
-
-  

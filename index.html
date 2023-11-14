@@ -9,21 +9,21 @@
 </head>
 <body>
     <div class="popup overlay">
-        <form class="popup-element popup__container overlay" novalidate>
+        <form class="popup-element popup__container" novalidate>
             <h2 class="popup__title">Editar Perfil</h2>
             <label class="popup__container-label popup-validate">
-                <input class="popup-input popup__name-field" type="text" name="name" placeholder="Nome">
+                <input class="popup-input popup__name-field" type="text" name="name" minlength="2" maxlength="40" placeholder="Nome" required>
                 <span class="error-span popup__title-span">Preencha esse campo.</span>
             </label>
             <label class="popup__container-label popup-validate">
-                <input class="popup-input popup__job-field" type="text" name="name" placeholder="Profissão">
+                <input class="popup-input popup__job-field" type="text" name="name" minlength="2" maxlength="40" placeholder="Profissão" required>
                 <span class="error-span  popup__job-field-span">Preencha esse campo.</span>
             </label>
-            <input class="popup__save-button disabled"  type="submit" name="acao" value="Salvar" >
+            <input class="popup__save-button disabled"  type="submit" name="acao" value="Salvar" disabled>
             <img class="popup__button popup__close-button" src="./images/Close_Icon.svg" alt="botão em forma de X para fechar formulário">
         </form>
     </div>
-    <div class="popup popup-more overlay">s
+    <div class="popup popup-more overlay">
         <form class="popup-more__container popup-element" >
             <h2 class="popup-more__title">Novo Local</h2>
             <label class="popup-more-label popup-validate">
@@ -34,7 +34,7 @@
                 <input class="popup-input popup-more__url" type="url" name="name" minlength="2" maxlength="200" placeholder="Link de Imagem" required>
                 <span class="error-span popup-more__error-span popup-more__url-title-span">Por favor, insira um endereço web.</span>
             </label>
-            <input class="popup-more__save-button popup__save-button disabled"  type="submit" name="acao" value="Salvar">
+            <input class="popup-more__save-button popup__save-button disabled"  type="submit" name="acao" value="Salvar" disabled>
             <img class="popup__button popup-more__close-button" src="./images/Close_Icon.svg" alt="botão em forma de X para fechar formulário">
         </form>
     </div>
@@ -53,7 +53,7 @@
             <img class="profile__picture" src="./images/Jacques_costeau.jpg" alt="user avatar picture ">
             <div class="profile__info">
                 <div class='profile__name-field'>
-                    <p class="profile__name">Jacques Cousteau</p>
+                    <p class="profile__name" value="Jacques Cousteau">Jacques Cousteau</p>
                     <img class="profile__edit-button" src="./images/edit_button.svg" alt="botão em forma de lápis sugerindo edição do campo">
                 </div>
                 <p class="profile__job">Explorar</p>
