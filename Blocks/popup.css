@@ -112,6 +112,17 @@
     border:none;
 }
 
+.popup-elements__container{ 
+
+    position:sticky; 
+    justify-self: center; 
+    background-color: transparent; 
+    align-self: center; 
+    opacity: 1;
+    z-index: 9999; 
+
+} 
+
 .popup-elements__image{
     max-width: 75vw;
     max-height: 75vh;

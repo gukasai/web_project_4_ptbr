@@ -11,17 +11,19 @@ function showInputError(errorElement, message) {
     }
 }
 
-function configurarCampoComValorInicial(input, elementoOrigem, variavelControle) {
+function SetDefaultValue(input, elementoOrigem) {
     const campoInput = document.querySelector(input);
     const textoAtual = document.querySelector(elementoOrigem).textContent;
 
     campoInput.addEventListener('focus', function () {
-        if (!variavelControle) {
+        if (!this.value.trim()) {
             this.value = textoAtual;
-            variavelControle = true;
         }
     });
 }
+
+SetDefaultValue('.popup__name-field', '.profile__name');
+SetDefaultValue('.popup__job-field', '.profile__job');
 
 function hideShowInputError(inputElement, validationMessage) {
     const errorElement = inputElement.closest(".popup-validate").querySelector(".error-span");
@@ -40,10 +42,11 @@ inputs.forEach(function (input) {
 });
 
 function validateInputs(event) {
+    console.log("validando")
     const popupContainer = event.target.closest('.popup-element');
     const inputs = popupContainer.querySelectorAll('.popup-input');
     const saveButton = popupContainer.querySelector('.popup__save-button');
-
+    const saveButtonMore = document.querySelector('.popup-more__save-button');
     let isValid = true;
 
     inputs.forEach(function (input) {
@@ -53,13 +56,18 @@ function validateInputs(event) {
     });
 
     if (isValid) {
-        saveButton.classList.remove('disabled')
-        saveButton.addEventListener('click', SalvarProfile);
+        saveButton.classList.remove('disabled');
+        saveButtonMore.classList.remove('disabled');
+        saveButton.addEventListener('click', SaveProfile);
+        saveButton.removeAttribute('disabled');
         saveButtonMore.addEventListener('click', createCardFromInput);
+        saveButtonMore.removeAttribute('disabled');
     } else {
         saveButton.classList.add('disabled');
-        saveButton.removeEventListener('click', SalvarProfile);
+        saveButton.removeEventListener('click', SaveProfile);
         saveButtonMore.removeEventListener('click', createCardFromInput);
+        saveButton.setAttribute('disabled');
+        saveButtonMore.setAttribute('disabled');
     }
 }
 
@@ -70,3 +78,5 @@ focusInputs.forEach(function (input) {
         input.addEventListener('input', validateInputs);
     });
 });
+saveButton.addEventListener('click', SaveProfile);
+saveButtonMore.addEventListener('click', createCardFromInput);

@@ -51,6 +51,7 @@
     ];
 
     function alternarClasse() {
+        console.log('Alternando classes...');
         popup.classList.toggle("visible");
         pagina.classList.toggle("background-hover");
     };
@@ -61,13 +62,14 @@
     };
 
     function alternarClassePopup() {
-        const popupElements = document.querySelector("#popup");
+        const popupElements = document.querySelector(".popup-elements__container");
         popupElements.classList.toggle("unhide");
         pagina.classList.add("background-hover");
         popupElements.classList.remove("background-hover");
     }
     
-    function SalvarProfile(evt) {
+    function SaveProfile(evt) {
+        console.log('Salvando');
         evt.preventDefault();
         userName.textContent = nameInput.value;
         userJob.textContent = jobInput.value;
@@ -88,6 +90,8 @@
         saveButton.classList.add("disabled");
         saveButtonMore.classList.add("disabled")
 }
+
+
     function abrirPopup(event) {
         const pictureElement = event.target;
         const cardElement = pictureElement.closest('.elements__containner');
@@ -205,13 +209,19 @@ function likeClick(event) {
         }
     });
     popup.addEventListener("click", function fecharOverlay(event) {
-        if (event.target.classList.contains("overlay")) {
+        if (
+            event.target.classList.contains("overlay") &&
+            !event.target.closest(".popup-element")
+        ) {
             fecharPopup();
         }
-        
     });
+    
     popupMore.addEventListener("click", function fecharOverlay(event) {
-        if (event.target.classList.contains("overlay")) {
+        if (
+            event.target.classList.contains("overlay") &&
+            !event.target.closest(".popup-element")
+        ) {
             fecharPopup();
-        } 
+        }
     });

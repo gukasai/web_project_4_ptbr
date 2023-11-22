@@ -29,10 +29,7 @@
 .hide{
     opacity:0;
 }
-.unhide{
-    opacity: 1;
-    visibility: visible;
-}
+
 .background-hover{
     opacity: 0.5;
 }
