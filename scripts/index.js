@@ -62,10 +62,10 @@
     };
 
     function alternarClassePopup() {
-        const popupElements = document.querySelector(".popup-elements__container");
+        const popupElements = document.querySelector("#popup");
         popupElements.classList.toggle("unhide");
-        pagina.classList.add("background-hover");
-        popupElements.classList.remove("background-hover");
+        pagina.classList.toggle("background-hover");
+        popupElements.classList.toggle("background-hover");
     }
     
     function SaveProfile(evt) {
@@ -108,7 +108,7 @@
         pagina.classList.toggle("background-hover");
         const botaoFechar =document.querySelector(".popup-elements__close-button");
         botaoFechar.addEventListener('click', alternarClassePopup);
-            
+
     };
 
     

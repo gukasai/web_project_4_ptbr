@@ -96,12 +96,12 @@
 .popup-elements{
     position:fixed;
     transition: opacity 0.3s ease-in-out;
-    opacity: 0;
+    opacity: 1;
     visibility: hidden;
     left:0%;
     top:0%;
-    width:90vw;
-    height:90vh;
+    width:100vw;
+    height:100vh;
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -113,7 +113,7 @@
 }
 
 .popup-elements__container{ 
-
+    margin:auto;
     position:sticky; 
     justify-self: center; 
     background-color: transparent; 
@@ -134,7 +134,6 @@
 
 .popup-elements__title{
     position:absolute;
-    background-color: transparent;
     bottom:-20px;
     width: 100%;
     font-size: 12px;
