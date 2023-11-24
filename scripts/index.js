@@ -205,7 +205,7 @@ function likeClick(event) {
     initialCards.forEach(createCard);
     document.addEventListener("keydown", function(event) {
         if (event.key === "Escape") {
-            fecharPopup();
+            alternarClassePopup();
         }
     });
     popup.addEventListener("click", function fecharOverlay(event) {

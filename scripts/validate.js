@@ -15,15 +15,13 @@ function SetDefaultValue(input, elementoOrigem) {
     const campoInput = document.querySelector(input);
     const textoAtual = document.querySelector(elementoOrigem).textContent;
 
-    campoInput.addEventListener('focus', function () {
-        if (!this.value.trim()) {
-            this.value = textoAtual;
-        }
-    });
+    campoInput.value = textoAtual;
 }
+    edit.addEventListener('click', function () {
+    SetDefaultValue('.popup__name-field', '.profile__name');
+    SetDefaultValue('.popup__job-field', '.profile__job');
+    })
 
-SetDefaultValue('.popup__name-field', '.profile__name');
-SetDefaultValue('.popup__job-field', '.profile__job');
 
 function hideShowInputError(inputElement, validationMessage) {
     const errorElement = inputElement.closest(".popup-validate").querySelector(".error-span");
