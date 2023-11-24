@@ -20,7 +20,7 @@
     const placeLink = document.querySelector('.popup-more__url');
     const elementTemplate = document.querySelector('#elements-template');
     const cardName = document.querySelector(".popup-more__place-field");
-    const cardLink = document.querySelector(".popup-more__url"); 
+    const cardLink = document.querySelector(".popup-more__url");
     const elementsPictures = document.querySelectorAll('.elements__picture');
     const popupElements = document.querySelector('#popup');
     const initialCards = [
@@ -98,7 +98,7 @@
         const descriptionElement = cardElement.querySelector('.elements__description');
         const popupImageElement = document.querySelector('.popup-elements__image');
         const popupTitleElement = document.querySelector('.popup-elements__title');
-        const popupElements = document.querySelector("#popup");  
+        const popupElements = document.querySelector("#popup");
         popupImageElement.src = pictureElement.src;
         popupImageElement.alt = pictureElement.alt;
         popupTitleElement.textContent = descriptionElement.textContent;
