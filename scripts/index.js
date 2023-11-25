@@ -51,7 +51,6 @@
     ];
 
     function alternarClasse() {
-        console.log('Alternando classes...');
         popup.classList.toggle("visible");
         pagina.classList.toggle("background-hover");
     };
@@ -102,16 +101,12 @@
         popupImageElement.src = pictureElement.src;
         popupImageElement.alt = pictureElement.alt;
         popupTitleElement.textContent = descriptionElement.textContent;
-        
         popupElements.classList.toggle("unhide");
         popupElements.classList.toggle("background-hover");
         pagina.classList.toggle("background-hover");
         const botaoFechar =document.querySelector(".popup-elements__close-button");
         botaoFechar.addEventListener('click', alternarClassePopup);
-
     };
-
-    
 
 
     function createCard(card) { 
@@ -204,9 +199,10 @@ function likeClick(event) {
     fecharMore.addEventListener('click', fecharPopup);
     initialCards.forEach(createCard);
     document.addEventListener("keydown", function(event) {
-        if (event.key === "Escape") {
+        if (event.key === "Escape" && popupElements.classList.contains("unhide")) {
             alternarClassePopup();
         }
+            fecharPopup();
     });
     popup.addEventListener("click", function fecharOverlay(event) {
         if (

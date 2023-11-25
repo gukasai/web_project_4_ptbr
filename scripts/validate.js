@@ -40,7 +40,6 @@ inputs.forEach(function (input) {
 });
 
 function validateInputs(event) {
-    console.log("validando")
     const popupContainer = event.target.closest('.popup-element');
     const inputs = popupContainer.querySelectorAll('.popup-input');
     const saveButton = popupContainer.querySelector('.popup__save-button');
